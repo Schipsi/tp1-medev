@@ -5,3 +5,6 @@ lib
 test
 dist/README.TXT
 dist/tp1-medev.jar
+*.class
+nbproject/private
+
