@@ -48,6 +48,13 @@ public class Gare extends CaseAchetable {
      * @return
      */
     public Joueur acheter(Joueur J) {
+        if (this.proprio == J){
+            System.out.println("Vous etes deja le priprio :)");
+        }
+        else {
        this.proprio = J;
+        }
     }
+    
+    public 
 }
