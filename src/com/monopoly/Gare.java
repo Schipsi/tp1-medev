@@ -9,20 +9,23 @@ public class Gare extends CaseAchetable {
     /**
      * Constructeur sans parametre
      */
-/*    public Gare () {
-        super ();
+    public Gare(String nom) {
+        super(nom);
     }
-    
-    */
     
     /**
      * Constructeur recopieur
      * @param G
-
-    public Gare (Gare G) {
-        super (G);
+     */
+     public Gare(Gare g) {
+        super(
+            (CaseAchetable)g
+        );
     }
-    */
+     
+     public Gare() {
+         super();
+     }
     
     /**
      * Constructeur avec params

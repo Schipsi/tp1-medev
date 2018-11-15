@@ -13,6 +13,14 @@ public abstract class Case {
     public Case(String nom){
         this.nom = nom;
     }
+    
+    public Case(Case c) {
+        this.nom = c.getNom();
+    }
+    
+    public Case() {
+        this.nom = "";
+    }
 
     public String getNom() {
         return nom;
