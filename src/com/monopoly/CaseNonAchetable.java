@@ -16,4 +16,7 @@ public abstract class CaseNonAchetable extends Case {
 	*/
 	public abstract void action(Joueur j);
 
+	public String toString(){
+		return(this.nom);
+	}
 }

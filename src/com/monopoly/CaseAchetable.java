@@ -9,10 +9,8 @@ public abstract class CaseAchetable extends Case {
 	private int prix;
 	private Joueur proprietaire;
 
-	public CaseAchetable(String nom, int prix, Joueur proprietaire) {
+	public CaseAchetable(String nom) {
 		super(nom);
-                this.prix = prix;
-                this.proprietaire = proprietaire;
 	}
         
         public CaseAchetable(CaseAchetable c) {
@@ -28,7 +26,7 @@ public abstract class CaseAchetable extends Case {
 	/**
 	 * Methode qui permet de représenter le loyer qu'un joueur doit payer au proprio (si il y en a un)
 	 */
-	public abstract int loyer(Joueur J);
+	public abstract int loyer();
 
 	/**
 	 * Methode qui permet de définir un propriétaire si il n'existe pas encore
