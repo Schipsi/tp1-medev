@@ -6,21 +6,14 @@
 package tp1.medev;
 
 /**
- *
+ * Classe représentant les cases qui permettent de piocher des cartes
  * @author ouissal ait rholofo
  */
-public class AllerEnPrison extends CaseNonAchetable {
+public class Pioche {
+     public Pioche() {
+        super();
+
+}
     
-    public AllerEnPrison()
-    {
-    super();
-    }
-    
-    public void action(Joueur j)
-    {
-    
-        j.setPosition(10);
-    }    
-   
     
 }

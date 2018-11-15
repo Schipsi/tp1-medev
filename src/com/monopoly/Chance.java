@@ -6,21 +6,13 @@
 package tp1.medev;
 
 /**
- *
+ * Permet de piocher des cartes de chances
  * @author ouissal ait rholofo
  */
-public class AllerEnPrison extends CaseNonAchetable {
-    
-    public AllerEnPrison()
-    {
-    super();
-    }
-    
-    public void action(Joueur j)
-    {
-    
-        j.setPosition(10);
-    }    
-   
+public class Chance extends Pioche {
+     public Chance() {
+        super();
+
+}
     
 }

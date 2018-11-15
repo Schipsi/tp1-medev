@@ -5,14 +5,66 @@
  */
 package tp1.medev;
 
+import java.util.LinkedList;
+
 /**
- *
+ * Represente une prison 
  * @author ouissal ait rholofo
  */
 public class Prison extends CaseNonAchetable {
+    
+     /**
+     *prix pour sortir de prison
+     */
+
+    private int prixSortie;
+
+    /**
+     *
+     * @return
+     */
+    public int getPrixSortie() {
+        return prixSortie;
+    }
+
+    /**
+     *
+     * @param prixSortie
+     */
+    public void setPrixSortie(int prixSortie) {
+        this.prixSortie = prixSortie;
+    }
+
+    /**
+     *
+     */
     public Prison() {
         super();
+        prixSortie = 50;
+    }
 
-}
+    /**
+     * sortir le joueur de prison soit via una carte sortir de prison ou si sa fortune est supérieure au prix
+     * @param j
+     */
+    public void action(Joueur j) {
+        if (j.getPrison() == true) {
+            if (j.getCartes().size() >= 0) {
+                j.setEnPrison(false);
+                LinkedList<Cartes> cartes = j.getCartes();
+                cartes.remove();
+            }
+            else {
+                
+                if (j.getFortune() >= prixSortie)
+                {
+                j.setEnPrison(false);
+                j.setFortune(j.setFortume()-prixSortie);
+                }
+            }
+
+        }
+
+    }
     
 }
