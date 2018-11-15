@@ -21,12 +21,10 @@ public class CaisseDeCommunaute extends Pioche {
      if (cartesC.size()>=1)
      {
      Carte cartepiochee=cartesC.remove();
+     cartepiochee.effet(j);
      cartesC.addLast(cartepriochee);
-     
-     
+     p.setCartesCaisseCommunaute(cartesC);
      }
-     
-     
      }
     
 }
