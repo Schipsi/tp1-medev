@@ -48,7 +48,7 @@ public class Joueur {
         return position;
     }
     public Plateau getRefPlateau(){
-        reuturn this.refPlateau;
+        return this.refPlateau;
     }
     
     public Case getCurrentCase(){
@@ -56,7 +56,7 @@ public class Joueur {
     }
     public boolean estEnPrison(){
         Case currentCase = this.getCurrentCase();
-        if(currentCase instanceof(AllerEnPrision)){
+        if(currentCase instanceof Prison){
             this.enPrison = true;
         }
         else{
@@ -70,13 +70,13 @@ public class Joueur {
     }
     
     public int getNbGare(){
-        int nb_gare = 0;
-        for(Case case : this.refPlateau.plateau){
-            if(case instanceof Gare){
-                nb_gare++;
+        int nbGare = 0;
+        for(Case mycase : this.refPlateau.plateau){
+            if(mycase instanceof Gare){
+                nbGare++;
             }
         }
-        return nb_gare;
+        return nbGare;
     }
     
     public void payerJoueur(int somme, Joueur joueur) throws NoMoreMoney{
