@@ -9,7 +9,7 @@ public class Joueur {
     private int position;
     private Plateau refPlateau;
     private int nbGare;
-    private ArrayList<Carte>;
+    private ArrayList<Carte> cartes;
     
     private boolean enPrison;
     public Joueur(String nom, int position){
@@ -49,6 +49,9 @@ public class Joueur {
     }
     public Plateau getRefPlateau(){
         return this.refPlateau;
+    }
+    public ArrayList<Carte> getCartes(){
+        return this.cartes;
     }
     
     public Case getCurrentCase(){
@@ -112,4 +115,5 @@ class NoMoreMoney extends Exception{
     public NoMoreMoney(){
         super("No more money!");
     }
+}
     

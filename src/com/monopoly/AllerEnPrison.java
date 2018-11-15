@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp1.medev;
+package com.monopoly;
 
 /**
  * Représente la case aller en prison qui envoie un joueur en prison dès qu'il est sur la case
