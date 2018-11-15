@@ -6,19 +6,16 @@
 package tp1.medev;
 
 /**
- * Permet de piocher des cartes de chances
+ *
  * @author ouissal ait rholofo
  */
-public class Chance extends Pioche {
-     public Chance() {
-        super();
+public class Tp1Medev {
 
-}
-     
-     public void action(){
-     
-     
-     
-     }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
     
 }
