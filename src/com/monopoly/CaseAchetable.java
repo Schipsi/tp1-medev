@@ -9,8 +9,10 @@ public abstract class CaseAchetable extends Case {
 	private int prix;
 	private Joueur proprietaire;
 
-	public CaseAchetable(String nom) {
+	public CaseAchetable(String nom, int prix, Joueur proprietaire) {
 		super(nom);
+                this.prix = prix;
+                this.proprietaire = proprietaire;
 	}
 
 	/**

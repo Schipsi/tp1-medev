@@ -41,7 +41,7 @@ public class Gare extends CaseAchetable {
      * @return Retourne le loyer en fonction du joueur
      */
     public int loyer(Joueur J) {
-       if (this.getProprietaire() == NULL|| this.getProprietaire() == J) {
+       if (this.getProprietaire() == null|| this.getProprietaire() == J) {
            return 0;
        }
        else {
@@ -52,15 +52,14 @@ public class Gare extends CaseAchetable {
     
     /**
      *
-     * @param J Le joueur qui passe par la gare et qui souhaite l'acheter, en devient le proprio
-     * @return
+     * @param 
      */
-    public Joueur acheter(Joueur J) {
+    public void acheter(Joueur J) {
         if (this.getProprietaire() == J){
             System.out.println("Vous etes deja le proprietaire :)");
         }
         else {
-       this.getProprietaire() = J;
+       this.setProprietaire(J);
         }
     }
     
@@ -70,9 +69,9 @@ public class Gare extends CaseAchetable {
      */
     public String toSting() {
         if (this.getProprietaire() == null) {
-        System.out.println(this.nom + "(coût :" + this.getPrix() + "euros) - sans proprietaire");
+        System.out.println(this.getNom() + "(coût :" + this.getPrix() + "euros) - sans proprietaire");
         }
         else {
-        System.out.println(this.nom + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom());
+        System.out.println(this.getNom() + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom());
     }
 }
