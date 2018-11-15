@@ -28,7 +28,7 @@ public class Taxe extends CaseNonAchetable{
     }
     
     public Taxe() {
-        super();
+        super("Taxe");
         this.montant = 0;
     }
 

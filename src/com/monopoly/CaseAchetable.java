@@ -16,9 +16,7 @@ public abstract class CaseAchetable extends Case {
 	}
         
         public CaseAchetable(CaseAchetable c) {
-            super(
-                (Case)c
-            );
+            super(c);
         }
         
         public CaseAchetable() {

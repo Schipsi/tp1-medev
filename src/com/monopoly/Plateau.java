@@ -68,7 +68,7 @@ public class Plateau {
     public int nbGares(Joueur j) {
         int nbGare = 0;
         for (Case c : plateau) {
-            if (c instanceof Gare && c.getProprio().equals(j)) {
+            if (c instanceof Gare && ((Gare) c).getProprietaire().equals(j)) {
                 nbGare++;
             }
         }

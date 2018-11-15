@@ -1,11 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tp1.medev;
-
-import java.util.LinkedList;
+package com.monopoly;
 
 /**
  * Represente une prison où sont incarcérés dans les joueurs
@@ -39,14 +32,14 @@ public class Prison extends CaseNonAchetable {
      *
      */
     public Prison() {
-        super();
+        super("Prison");
         prixSortie = 50;
     }
 
     /**
      * sortir le joueur de prison soit via una carte sortir de prison ou si sa fortune est supérieure au prix
-     * @param j
      */
+    /*
     public void action(Joueur j) {
         if (j.getPrison() == true) {
             if (j.getCartes().size() >= 1) {
@@ -66,11 +59,11 @@ public class Prison extends CaseNonAchetable {
         }
 
     }
+    */
     
     public String toString(){
-    
-    String res= this.getClass().getName()+ " " + this.getNom();
-    return res
+        String res= this.getClass().getName()+ " " + this.getNom();
+        return res;
     }
     
 }

@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package monopoly;
+package com.monopoly;
 
 /**
  * Cette classe représente les cases sur lesquelles on peut construire des
@@ -77,7 +72,7 @@ public class Constructible extends CaseAchetable {
      */
     public int loyer() {
 
-        if (this.getProprio() == null) {
+        if (this.getProprietaire() == null) {
             return 0;
 
         } else {
@@ -86,7 +81,8 @@ public class Constructible extends CaseAchetable {
                 return LOYERDEFAULT;
 
             } else {
-                return B * this.hotel + A * this.maison;
+                //return B * this.hotel + A * this.maison;
+                return 0;
             }
         }
 
@@ -100,9 +96,9 @@ public class Constructible extends CaseAchetable {
      */
     public void acheter(Joueur j) {
 
-        if (this.getProprio() == null && j.getFortune() >= this.getPrix()) {
+        if (this.getProprietaire() == null && j.getFortune() >= this.getPrix()) {
 
-            this.setJoueur(j);
+            this.setProprietaire(j);
             System.out.print("Le joueur ");
             System.out.print(j.getNom());
             System.out.print(" a acheté la case ");
@@ -110,7 +106,7 @@ public class Constructible extends CaseAchetable {
 
             j.setFortune(j.getFortune() - this.getPrix());
 
-        } else if (this.getProprio() == null && j.getFortune() < this.getPrix()) {
+        } else if (this.getProprietaire() == null && j.getFortune() < this.getPrix()) {
 
             System.out.println("Pas assez d'argent");
 
@@ -133,13 +129,13 @@ public class Constructible extends CaseAchetable {
 
         caseString = this.getNom() + " (coût : " + this.getPrix() + "€" + " ) - ";
 
-        if (this.getProprio() == null) {
+        if (this.getProprietaire() == null) {
 
             caseString += "sans propriétaire";
 
         } else {
 
-            caseString += "propriétaire : " + this.getProprio().getNom() + ", " + this.getMaison() + " maison(s), ";
+            caseString += "propriétaire : " + this.getProprietaire().getNom() + ", " + this.getMaison() + " maison(s), ";
 
             if (this.hotel) {
 

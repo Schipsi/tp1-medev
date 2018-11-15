@@ -4,28 +4,21 @@ package com.monopoly;
  *
  * @author Ismail
  */
-public class Gare extends CaseAchetable {
+public abstract class Gare extends CaseAchetable {
     
     /**
      * Constructeur sans parametre
      */
-    public Gare(String nom) {
-        super(nom);
-    }
+    public Gare() {}
     
     /**
      * Constructeur recopieur
-     * @param G
      */
      public Gare(Gare g) {
         super(
             (CaseAchetable)g
         );
     }
-     
-     public Gare() {
-         super();
-     }
     
     /**
      * Constructeur avec params
@@ -76,7 +69,7 @@ public class Gare extends CaseAchetable {
         res = this.getNom() + "(coût :" + this.getPrix() + "euros) - sans proprietaire";
         }
         else {
-        res = this.getNom() + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom();
+        res = this.getNom() + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + getProprietaire();
     }
         return res;
 }
