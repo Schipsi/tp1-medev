@@ -73,7 +73,7 @@ public class Joueur {
     
     /**
      * 
-     * @return renvoyer le nombre aleatoire entre 1 et 6
+     * @return renvoyer le nombre aleatoire entre 1 et 6.
      */
     public static int lanceLeDe(){
         return ((int) Math.floor(Math.random()*6))+1;
@@ -116,7 +116,18 @@ public class Joueur {
         }
                 
     }  
+    /**
+     * affiche les infos d'un joueur.
+     */
+    public void affiche(){
+        System.out.println("Joueur: "+this.nom);
+        System.out.println("Fortune: "+this.fortune);
+        System.out.println("Position: "+this.position);
+        this.estEnPrison();
+        System.out.println("EstEnPrison: "+this.enPrison);
+    }
 }
+
 /**
  * Class NoMoreMoney est une classe qui herite de Exception
  * @author Exia
