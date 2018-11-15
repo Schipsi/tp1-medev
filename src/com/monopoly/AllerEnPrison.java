@@ -9,10 +9,18 @@ package tp1.medev;
  *
  * @author ouissal ait rholofo
  */
-public class Prison extends CaseNonAchetable {
-    public Prison() {
-        super();
-
-}
+public class AllerEnPrison extends CaseNonAchetable {
+    
+    public AllerEnPrison()
+    {
+    super();
+    }
+    
+    public void EnvoiPrison(Joueur j)
+    {
+    
+        j.setPosition(10);
+    }    
+   
     
 }

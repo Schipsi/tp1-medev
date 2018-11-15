@@ -1,2 +1,5 @@
 .idea
 Monopoly.iml
+build
+lib
+test
