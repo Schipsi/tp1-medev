@@ -15,9 +15,9 @@ public class Jeu {
     private static Plateau partie;
 
     public static void main (String[] args) {
-
         partie = new Plateau();
         partie.initPlateau();
+        tourDeJeu();
     }
 
     /**
@@ -32,7 +32,7 @@ public class Jeu {
     /**
      * Effectue un tour de jeu de tous les joueurs.
      */
-    public void tourDeJeu()
+    public static void tourDeJeu()
     {
         Scanner sc = new Scanner(System.in);
 
@@ -42,7 +42,7 @@ public class Jeu {
             {
                 String nom = j.getNom();
                 System.out.println("Tour de jeu de : " + nom);
-                if(j.enPrison)
+                if(j.estEnPrison())
                 {
                     System.out.println(nom + " est en prison.");
                     j.affiche();
@@ -82,9 +82,9 @@ public class Jeu {
                     }
                     else
                     {
-                        if(((CaseAchetable)c).getProprio == null)
+                        if(((CaseAchetable)c).getProprietaire() == null)
                         {
-                            int prix = ((CaseAchetable) c).getPrix;
+                            int prix = ((CaseAchetable) c).getPrix();
                             System.out.println(nom + " peut acheter la case " + c.getNom()
                                     + " pour " + prix);
                             System.out.println("Voulez-vous payer 1500 pour sortir de prison?");
@@ -101,7 +101,7 @@ public class Jeu {
                                 }
                                 else
                                 {
-                                    System.out.println("Pas assez de fond.")
+                                    System.out.println("Pas assez de fond.");
                                 }
                             } else {
                                 System.out.println("Achat non effectué.");
@@ -109,7 +109,7 @@ public class Jeu {
                         }
                         else
                         {
-                            j.payer(((CaseAchetable)c).getProprio,((CaseAchetable)c).loyer());
+                            j.payer(((CaseAchetable)c).getProprietaire(),((CaseAchetable)c).loyer());
                         }
                     }
 
@@ -118,13 +118,13 @@ public class Jeu {
             }
         });
 
-        if(partie.joueurs.size() > 1)
+        if(finDePartie())
         {
-            tourDeJeu();
+            System.exit(0);
         }
         else
         {
-            finDePartie();
+            tourDeJeu();
         }
     }
 
@@ -132,11 +132,18 @@ public class Jeu {
      * Met fin à la partie dès qu'il n'y a plus qu'un joueur.
      * Quitte l'application.
      */
-    public void finDePartie()
+    public static boolean finDePartie()
     {
-        System.out.println("Fin de partie.");
-        System.out.println(partie.joueurs.get(0).getNom() + " a gagné.");
-        System.exit(0);
+        if(partie.joueurs.size() > 1)
+        {
+            return false;
+        }
+        else
+        {
+            System.out.println("Fin de partie.");
+            System.out.println(partie.joueurs.get(0).getNom() + " a gagné.");
+            return true;
+        }
     }
 
 }
