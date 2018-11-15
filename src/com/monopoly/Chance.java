@@ -8,7 +8,7 @@ package tp1.medev;
 import java.util.LinkedList;
 
 /**
- * Permet de piocher des cartes de chances
+ *Case qui permet de piocher des cartes de chances
  * @author ouissal ait rholofo
  */
 public class Chance extends Pioche {

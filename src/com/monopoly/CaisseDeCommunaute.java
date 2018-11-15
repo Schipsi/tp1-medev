@@ -8,7 +8,7 @@ package tp1.medev;
 import java.util.LinkedList;
 
 /**
- *Permet de piocher des cartes de communauté
+ *case qui rermet de piocher des cartes de communauté
  * @author ouissal ait rholofo
  */
 public class CaisseDeCommunaute extends Pioche {
