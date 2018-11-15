@@ -30,17 +30,10 @@ public class CaseAchetable extends Case {
     }
 	/**
 	* Methode qui permet de représenter le loyer qu'un joueur doit payer au proprio (si il y en a un)
-	*@param prix loyer 
-	*@param pigeon celui qui paye le loyer
+	*
 	*/
 	
-	public void loyer(int prix, Joueur pigeon){
-		if (this.proprietaire == null){
-			
-		} else {
-			
-		}	
-	}
+	public abstract int loyer();
 	
 	/** 
 	* Methode qui permet de définir un propriétaire si il n'existe pas encore
