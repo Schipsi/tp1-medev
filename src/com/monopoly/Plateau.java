@@ -27,39 +27,38 @@ public class Plateau {
      */
     public List<Case> plateau = new ArrayList<>();
     
-    public int nbGares(Joueur j) {
-        return 0;
-    }
-    
-    public void affiche() {
-
-    }
-    
-    public void avance(Case c, int n) {
-        
-    }
-    
     public void initPlateau() {
         
     }
     
-    public void addJoueur(Joueur j) {
-        this.joueurs.add(j);
+    public void affiche() {
+        for(Case c : plateau) {
+            System.out.println(c.toString());
+        }
     }
     
-    public void deleteJoueur(Joueur j) {
         
+    public int nbGares(Joueur j) {
+        return 0;
+    }
+
+    public void addJoueur(Joueur j) {
+        this.joueurs.add(j);
     }
     
     public void addCase(Case c) {
         this.plateau.add(c);
     }
 
-    public void deleteCase(Case c) {
-        
+    public void deleteCase(int n) {
+        this.plateau.remove(n);
     }
     
-    public void getCase(int n) {
-        
+    public Case getCase(int n) {
+        return this.plateau.get(n);
+    }
+
+    public Case avance(Case c, int n) {
+        return getCase(plateau.indexOf(c) + n);
     }
 }
