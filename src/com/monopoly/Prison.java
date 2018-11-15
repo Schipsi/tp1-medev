@@ -8,7 +8,7 @@ package tp1.medev;
 import java.util.LinkedList;
 
 /**
- * Represente une prison 
+ * Represente une prison où sont incarcérés dans les joueurs
  * @author ouissal ait rholofo
  */
 public class Prison extends CaseNonAchetable {
