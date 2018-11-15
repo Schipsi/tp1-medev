@@ -9,26 +9,29 @@ public class Gare extends CaseAchetable {
     /**
      * Constructeur sans parametre
      */
-    public Gare () {
+/*    public Gare () {
         super ();
     }
+    
+    */
     
     /**
      * Constructeur recopieur
      * @param G
-     */
+
     public Gare (Gare G) {
         super (G);
     }
+    */
     
     /**
      * Constructeur avec params
      * @param nom
      * @param prix
-     * @param proprio
+     * @param proprietaire
      */
-    public Gare (String nom, int prix, Joueur proprio) {
-        super (nom, prix, proprio);
+    public Gare (String nom, int prix, Joueur proprietaire) {
+        super (nom, prix, proprietaire);
     }
     
     
@@ -38,11 +41,11 @@ public class Gare extends CaseAchetable {
      * @return Retourne le loyer en fonction du joueur
      */
     public int loyer(Joueur J) {
-       if (this.proprio == NULL|| this.proprio == J) {
+       if (this.getProprietaire() == NULL|| this.getProprietaire() == J) {
            return 0;
        }
        else {
-           return 2500*J.nbGare;
+           return 2500*J.getNbGare();
        }
        
     }
@@ -53,11 +56,11 @@ public class Gare extends CaseAchetable {
      * @return
      */
     public Joueur acheter(Joueur J) {
-        if (this.proprio == J){
+        if (this.getProprietaire() == J){
             System.out.println("Vous etes deja le proprietaire :)");
         }
         else {
-       this.proprio = J;
+       this.getProprietaire() = J;
         }
     }
     
@@ -66,10 +69,10 @@ public class Gare extends CaseAchetable {
      * @return Retourne le cout d'achat d'une gare, en indiquant son proprietaire si celle en possede un
      */
     public String toSting() {
-        if (this.proprio == NULL) {
-        System.out.println(this.nom + "(coût :" + this.prix + "euros) - sans proprietaire");
+        if (this.getProprietaire() == null) {
+        System.out.println(this.nom + "(coût :" + this.getPrix() + "euros) - sans proprietaire");
         }
         else {
-        System.out.println(this.nom + "(coût :" + this.prix + "euros) - proprietaitre : " + J.nom);
+        System.out.println(this.nom + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom());
     }
 }
