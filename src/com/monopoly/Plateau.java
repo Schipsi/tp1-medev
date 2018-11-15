@@ -39,7 +39,13 @@ public class Plateau {
     
         
     public int nbGares(Joueur j) {
-        return 0;
+        int nbGare = 0;
+        for (Case c : plateau) {
+            if (c instanceof Gare && c.getProprio().equals(j)) {
+                nbGare++;
+            }
+        }
+        return nbGare;
     }
 
     public void addJoueur(Joueur j) {
