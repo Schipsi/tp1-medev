@@ -52,7 +52,7 @@ public class Gare extends CaseAchetable {
     
     /**
      *
-     * @param 
+     * @param J
      */
     public void acheter(Joueur J) {
         if (this.getProprietaire() == J){
@@ -68,10 +68,13 @@ public class Gare extends CaseAchetable {
      * @return Retourne le cout d'achat d'une gare, en indiquant son proprietaire si celle en possede un
      */
     public String toSting() {
+        String res;
         if (this.getProprietaire() == null) {
-        System.out.println(this.getNom() + "(coût :" + this.getPrix() + "euros) - sans proprietaire");
+        res = this.getNom() + "(coût :" + this.getPrix() + "euros) - sans proprietaire";
         }
         else {
-        System.out.println(this.getNom() + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom());
+        res = this.getNom() + "(coût :" + this.getPrix() + "euros) - proprietaitre : " + J.getNom();
     }
+        return res;
+}
 }
