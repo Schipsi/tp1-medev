@@ -16,7 +16,7 @@ public abstract class CaseAchetable extends Case {
 	/**
 	 * Methode qui permet de représenter le loyer qu'un joueur doit payer au proprio (si il y en a un)
 	 */
-	public abstract int loyer();
+	public abstract int loyer(Joueur J);
 
 	/**
 	 * Methode qui permet de définir un propriétaire si il n'existe pas encore
