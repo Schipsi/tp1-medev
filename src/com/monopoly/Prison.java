@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monopoly;
+package tp1.medev;
 
 import java.util.LinkedList;
 
@@ -65,6 +65,12 @@ public class Prison extends CaseNonAchetable {
 
         }
 
+    }
+    
+    public String toString(){
+    
+    String res= this.getClass().getName()+ " " + this.getNom()
+    return res
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monopoly;
+package tp1.medev;
 
 import java.util.LinkedList;
 
@@ -16,15 +16,13 @@ public class CaisseDeCommunaute extends Pioche {
         super();
 
 }
-     public void action(Joueur j, Plateau p){
-     LinkedList<Carte> cartesC=p.getCartesCaisseCommunaute();
-     if (cartesC.size()>=1)
-     {
-     Carte cartepiochee=cartesC.remove();
-     cartepiochee.effet(j);
-     cartesC.addLast(cartepriochee);
-     p.setCartesCaisseCommunaute(cartesC);
-     }
-     }
+     public void action(Joueur j){
     
+}
+    public String toString(){
+    
+    String res= this.getClass().getName()+ " " + this.getNom()
+    return res
+    }
+
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monopoly;
+package tp1.medev;
 
 /**
  *
@@ -17,5 +17,11 @@ public class Depart extends CaseNonAchetable {
     public void action(Joueur j)
     {
     
+    }
+    
+       public String toString(){
+    
+    String res= this.getClass().getName()+ " " + this.getNom()
+    return res
     }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.monopoly;
+package tp1.medev;
 
 /**
  * Représente la case aller en prison qui envoie un joueur en prison dès qu'il est sur la case
@@ -20,7 +20,13 @@ public class AllerEnPrison extends CaseNonAchetable {
     {
     
         j.setPosition(10);
-    }    
+    }   
+    
+    public String toString(){
+    
+    String res= this.getClass().getName()+ " " + this.getNom()
+    return res
+    }
    
     
 }
