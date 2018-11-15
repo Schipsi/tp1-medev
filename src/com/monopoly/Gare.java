@@ -2,7 +2,7 @@ package com.monopoly;
 
 /**
  *
- * @author Ismail
+ * @author Ismail && Yousra
  */
 public class Gare extends CaseAchetable {
     
@@ -29,7 +29,7 @@ public class Gare extends CaseAchetable {
     
     
     /**
-     *
+     * 
      * @return
      */
     public int loyer(Joueur J) {
@@ -48,6 +48,6 @@ public class Gare extends CaseAchetable {
      * @return
      */
     public Joueur acheter(Joueur J) {
-       
+       this.proprio = J;
     }
 }
