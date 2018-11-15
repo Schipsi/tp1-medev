@@ -7,15 +7,13 @@ package com.monopoly;
 public class Gare extends CaseAchetable {
     
     /**
-     * Constructeur sans parametre
+     * Le propriétaire de la gare
      */
-    public Gare(String nom) {
-        super(nom);
-    }
-    
+    public Joueur proprietaire;
+      
     /**
      * Constructeur recopieur
-     * @param G
+     * @param g
      */
      public Gare(Gare g) {
         super(
@@ -23,6 +21,9 @@ public class Gare extends CaseAchetable {
         );
     }
      
+     /**
+      * Cosntructeur sans paramètres
+      */
      public Gare() {
          super();
      }
@@ -34,7 +35,7 @@ public class Gare extends CaseAchetable {
      * @param proprietaire
      */
     public Gare (String nom, int prix, Joueur proprietaire) {
-        super (nom, prix, proprietaire);
+        super(nom, prix, proprietaire);
     }
     
     
