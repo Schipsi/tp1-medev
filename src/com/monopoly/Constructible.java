@@ -77,7 +77,7 @@ public class Constructible extends CaseAchetable {
      */
     public int loyer() {
 
-        if (this.getJoueur() == null) {
+        if (this.getProprio() == null) {
             return 0;
 
         } else {
@@ -100,7 +100,7 @@ public class Constructible extends CaseAchetable {
      */
     public void acheter(Joueur j) {
 
-        if (this.getJoueur() == null && j.getFortune() >= this.getPrix()) {
+        if (this.getProprio() == null && j.getFortune() >= this.getPrix()) {
 
             this.setJoueur(j);
             System.out.print("Le joueur ");
@@ -110,7 +110,7 @@ public class Constructible extends CaseAchetable {
 
             j.setFortune(j.getFortune() - this.getPrix());
 
-        } else if (this.getJoueur() == null && j.getFortune() < this.getPrix()) {
+        } else if (this.getProprio() == null && j.getFortune() < this.getPrix()) {
 
             System.out.println("Pas assez d'argent");
 
@@ -119,6 +119,38 @@ public class Constructible extends CaseAchetable {
             System.out.println("Déjà un propriétaire");
 
         }
+
+    }
+
+    /**
+     * Cette méthode donne la ligne d'affichage de la case
+     *
+     * @return la chaîne de caractères donnant les informations de la case
+     */
+    public String toString() {
+
+        String caseString;
+
+        caseString = this.getNom() + " (coût : " + this.getPrix() + "€" + " ) - ";
+
+        if (this.getProprio() == null) {
+
+            caseString += "sans propriétaire";
+
+        } else {
+
+            caseString += "propriétaire : " + this.getProprio().getNom() + ", " + this.getMaison() + " maison(s), ";
+
+            if (this.hotel) {
+
+                caseString += "1 hôtel, ";
+            }
+
+            caseString += "loyer = " + this.loyer() + "€";
+
+        }
+
+        return caseString;
 
     }
 
