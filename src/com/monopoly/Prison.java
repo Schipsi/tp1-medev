@@ -49,9 +49,9 @@ public class Prison extends CaseNonAchetable {
      */
     public void action(Joueur j) {
         if (j.getPrison() == true) {
-            if (j.getCartes().size() >= 0) {
+            if (j.getCartes().size() >= 1) {
                 j.setEnPrison(false);
-                LinkedList<Cartes> cartes = j.getCartes();
+                LinkedList<Carte> cartes = j.getCartes();
                 cartes.remove();
             }
             else {
