@@ -45,7 +45,7 @@ public class Jeu {
                 if(j.estEnPrison())
                 {
                     System.out.println(nom + " est en prison.");
-                    j.affiche();
+                    //j.affiche();
                     System.out.println("Voulez-vous payer 1500 pour sortir de prison?");
                     String action = "";
                     while(!"o".equals(action) && !"n".equals(action))
@@ -89,7 +89,7 @@ public class Jeu {
                                     + " pour " + prix);
                             System.out.println("Voulez-vous payer 1500 pour sortir de prison?");
                             String action = "";
-                            j.affiche();
+                            //j.affiche();
                             while (!"o".equals(action) && !"n".equals(action)) {
                                 System.out.println("Oui (o) / Non (n)");
                             }
@@ -109,7 +109,7 @@ public class Jeu {
                         }
                         else
                         {
-                            j.payer(((CaseAchetable)c).getProprietaire(),((CaseAchetable)c).loyer());
+                            //j.payer(((CaseAchetable)c).getProprietaire(),((CaseAchetable)c).loyer());
                         }
                     }
 

@@ -4,7 +4,7 @@ package com.monopoly;
  * Represente une prison où sont incarcérés dans les joueurs
  * @author ouissal ait rholofo
  */
-public class Prison extends CaseNonAchetable {
+public abstract class Prison extends CaseNonAchetable {
     
      /**
      *prix pour sortir de prison

@@ -16,7 +16,7 @@ import java.util.List;
  * @author Schipsi
  */
 public class Plateau {
-    
+
     /**
      * Cette liste contient les joueurs de la partie de Monopoly
      */
@@ -49,17 +49,13 @@ public class Plateau {
         for(Case c : plateau) {
             System.out.println(c.toString());
         }
-        for (Carte c : caisseDeCommunaute)
+        for (CaisseDeCommunaute c : caisseDeCommunaute)
         {
             System.out.println(c.toString());
         }
-        for (Carte c : chance)
+        for (Chance c : chance)
         {
             System.out.println(c.toString());  
-        }
-        for (Joueur j : Joueur)
-        {
-            System.out.println(j.toString());  
         }
         
     }
