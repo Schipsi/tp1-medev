@@ -3,3 +3,5 @@ Monopoly.iml
 build
 lib
 test
+dist/README.TXT
+dist/tp1-medev.jar
