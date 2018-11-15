@@ -6,7 +6,7 @@
 package com.monopoly;
 
 /**
- *
+ * Cette classe représente les cases impôts sur le revenu, parc gratuit et Taxe de luxe où le joueur va payer
  * @author Atimcos/Cosmita/Cosme
  */
 public class Taxe extends CaseNonAchetable{
@@ -18,7 +18,7 @@ public class Taxe extends CaseNonAchetable{
     
     /**
      *
-     * @param montant Montant à payer par le joueur >0
+     * @param montant Montant à payer par le joueur supérieur à 0
      * @param nom Nom de la case
      */
     
@@ -39,4 +39,13 @@ public class Taxe extends CaseNonAchetable{
     public void setMontant(int montant) {
         this.montant = montant;
     }
+    
+    /**
+     * On effectue l'action de la case, ici payer
+     * @param j Le joueur qui vient de tomber sur la case
+     */
+    public void action(Joueur j){
+        int x = j.getFortune();
+        j.setFortune(x-this.montant);
+    }  
 }

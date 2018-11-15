@@ -6,8 +6,8 @@ package com.monopoly;
 public abstract class Case {
 
     /**
-	*nom indique le nom de la case
-	*/
+     * nom indique le nom de la case
+     */
     private String nom;
 
     public Case(String nom){
@@ -16,5 +16,9 @@ public abstract class Case {
 
     public String getNom() {
         return nom;
+    }
+    
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 }
