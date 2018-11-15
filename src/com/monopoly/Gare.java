@@ -1,4 +1,5 @@
 package com.monopoly;
 
-public class Gare {
+public class Gare extends CaseAchetable {
+    
 }
