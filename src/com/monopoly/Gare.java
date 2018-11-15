@@ -15,6 +15,7 @@ public class Gare extends CaseAchetable {
     
     /**
      * Constructeur recopieur
+     * @param G
      */
     public Gare (Gare G) {
         super (G);
@@ -22,6 +23,9 @@ public class Gare extends CaseAchetable {
     
     /**
      * Constructeur avec params
+     * @param nom
+     * @param prix
+     * @param proprio
      */
     public Gare (String nom, int prix, Joueur proprio) {
         super (nom, prix, proprio);
@@ -30,7 +34,8 @@ public class Gare extends CaseAchetable {
     
     /**
      * 
-     * @return
+     * @param J
+     * @return Retourne le loyer en fonction du joueur
      */
     public int loyer(Joueur J) {
        if (this.proprio == NULL|| this.proprio == J) {
@@ -44,7 +49,7 @@ public class Gare extends CaseAchetable {
     
     /**
      *
-     * @param J Le joueur qui passe par la gare
+     * @param J Le joueur qui passe par la gare et qui souhaite l'acheter, en devient le proprio
      * @return
      */
     public Joueur acheter(Joueur J) {
@@ -56,11 +61,15 @@ public class Gare extends CaseAchetable {
         }
     }
     
+    /**
+     *
+     * @return Retourne le cout d'achat d'une gare, en indiquant son proprietaire si celle en possede un
+     */
     public String toSting() {
         if (this.proprio == NULL) {
-        System.out.println(this.nom + "(cout :" + this.prix + "euros) - sans proprietaire");
+        System.out.println(this.nom + "(coût :" + this.prix + "euros) - sans proprietaire");
         }
         else {
-        System.out.println(this.nom + "(cout :" + this.prix + "euros) - proprietaitre : " + J.nom ", " + J.nbma);
+        System.out.println(this.nom + "(coût :" + this.prix + "euros) - proprietaitre : " + J.nom);
     }
 }
