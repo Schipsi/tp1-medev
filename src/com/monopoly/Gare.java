@@ -56,5 +56,4 @@ public class Gare extends CaseAchetable {
         }
     }
     
-    public 
 }
