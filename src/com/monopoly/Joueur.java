@@ -84,14 +84,15 @@ public class Joueur {
      * @return  renoyer le nombre de gare de cette joueur.
      */
     public int getNbGare(){
-        int nbGare = 0;
-        for(Case mycase : this.refPlateau.plateau){
-            if(mycase instanceof Gare){
-                if(((Gare) mycase).getProprietaire().equals(this.nom)){
-                    nbGare++;
+        int temp_nbGare = 0;
+        for(Case one_case : this.refPlateau.plateau){
+            if(one_case instanceof Gare){
+                if(((Gare) one_case).getProprietaire().equals(this.nom)){
+                    temp_nbGare++;
                 }
             }
         }
+        this.nbGare = temp_nbGare;
         return nbGare;
     }
     
@@ -119,12 +120,11 @@ public class Joueur {
     /**
      * affiche les infos d'un joueur.
      */
-    public void affiche(){
-        System.out.println("Joueur: "+this.nom);
-        System.out.println("Fortune: "+this.fortune);
-        System.out.println("Position: "+this.position);
+    public String toString(){
         this.estEnPrison();
-        System.out.println("EstEnPrison: "+this.enPrison);
+        return "Joueur: "+this.nom+"; fortune: "+this.fortune+"; Position: "+
+                this.position + "; EstEnPrison: "+this.enPrison +"; nbGare: "+
+                this.getNbGare();
     }
 }
 
