@@ -14,6 +14,16 @@ public abstract class CaseAchetable extends Case {
                         this.prix = prix;
                         this.proprietaire = proprietaire;
 	}
+        
+        public CaseAchetable(CaseAchetable c) {
+            super(
+                (Case)c
+            );
+        }
+        
+        public CaseAchetable() {
+            super();
+        }
 
 	/**
 	 * Methode qui permet de représenter le loyer qu'un joueur doit payer au proprio (si il y en a un)
