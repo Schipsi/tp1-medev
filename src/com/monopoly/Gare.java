@@ -2,7 +2,7 @@ package com.monopoly;
 
 /**
  *
- * @author Ismail && Yousra
+ * @author Ismail
  */
 public class Gare extends CaseAchetable {
     
@@ -49,11 +49,18 @@ public class Gare extends CaseAchetable {
      */
     public Joueur acheter(Joueur J) {
         if (this.proprio == J){
-            System.out.println("Vous etes deja le priprio :)");
+            System.out.println("Vous etes deja le proprietaire :)");
         }
         else {
        this.proprio = J;
         }
     }
     
+    public String toSting() {
+        if (this.proprio == NULL) {
+        System.out.println(this.nom + "(cout :" + this.prix + "euros) - sans proprietaire");
+        }
+        else {
+        System.out.println(this.nom + "(cout :" + this.prix + "euros) - proprietaitre : " + J.nom ", " + J.nbma);
+    }
 }
