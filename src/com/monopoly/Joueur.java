@@ -1,7 +1,10 @@
 package com.monopoly;
 
 import java.util.ArrayList;
-
+/**
+ * Class Joueur
+ * @author Exia
+ */
 public class Joueur {
     private String nom;
 //    private String prenom;
@@ -68,20 +71,36 @@ public class Joueur {
         return this.enPrison;
     }
     
+    /**
+     * 
+     * @return renvoyer le nombre aleatoire entre 1 et 6
+     */
     public static int lanceLeDe(){
         return ((int) Math.floor(Math.random()*6))+1;
     }
     
+    /**
+     * 
+     * @return  renoyer le nombre de gare de cette joueur.
+     */
     public int getNbGare(){
         int nbGare = 0;
         for(Case mycase : this.refPlateau.plateau){
             if(mycase instanceof Gare){
-                nbGare++;
+                if(((Gare) mycase).getProprietaire().equals(this.nom)){
+                    nbGare++;
+                }
             }
         }
         return nbGare;
     }
     
+    /**
+     * 
+     * @param somme l'argent que joueur veut payer
+     * @param joueur le joeur qui va accepter cette somme.
+     * @throws NoMoreMoney si somme>fortune, il ne peut pas payer.
+     */
     public void payerJoueur(int somme, Joueur joueur) throws NoMoreMoney{
         // throw exception NoMoreMoney
         try {
@@ -96,18 +115,12 @@ public class Joueur {
             e.getMessage();
         }
                 
-    }
-
-    
-    public void affiche(){
-        // TODO:
-        
-    }
-    
-    
-    
+    }  
 }
-
+/**
+ * Class NoMoreMoney est une classe qui herite de Exception
+ * @author Exia
+ */
 class NoMoreMoney extends Exception{
     public NoMoreMoney(String message){
         super(message);
