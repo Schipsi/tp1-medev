@@ -27,6 +27,20 @@ public class Plateau {
      */
     public List<Case> plateau = new ArrayList<>();
     
+    /**
+     * Cette liste contient les cartes CaisseDeCommunaute du Monopoly
+     */
+    public List<CaisseDeCommunaute> caisseDeCommunaute = new LinkedList<>();
+    
+    /**
+     * Cette liste contient les cartes CaisseDeCommunaute du Monopoly
+     */
+    public List<Chance> chance = new LinkedList<>();
+    
+    public Plateau() {
+        initPlateau();
+    }
+    
     public void initPlateau() {
         
     }
@@ -66,5 +80,37 @@ public class Plateau {
 
     public Case avance(Case c, int n) {
         return getCase(plateau.indexOf(c) + n);
+    }
+    
+    public void addCarteCaisseDeCOmmunaute(CaisseDeCommunaute c) {
+        this.caisseDeCommunaute.add(c);
+    }
+    
+    public CaisseDeCommunaute piocherCarteCaisseDeCOmmunaute() {
+        if (this.chance.size() > 0) {
+            CaisseDeCommunaute carte = this.caisseDeCommunaute.get(0);
+            this.caisseDeCommunaute.add(carte);
+            this.caisseDeCommunaute.remove(0);
+            return carte;
+        } else {
+            System.out.println("Pas de cartes caisse de communauté !");
+            return null;
+        }   
+    }
+    
+    public void addCarteChance(Chance c) {
+        this.chance.add(c);
+    }
+    
+    public Chance piocherCarteChance() {
+        if (this.chance.size() > 0) {
+            Chance carte = this.chance.get(0);
+            this.chance.add(carte);
+            this.chance.remove(0);
+            return carte;
+        } else {
+            System.out.println("Pas de cartes chance !");
+            return null;
+        }   
     }
 }
