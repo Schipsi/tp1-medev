@@ -6,21 +6,18 @@
 package tp1.medev;
 
 /**
- *
+ *Permet de piocher des cartes de communauté
  * @author ouissal ait rholofo
  */
-public class AllerEnPrison extends CaseNonAchetable {
-    
-    public AllerEnPrison()
-    {
-    super();
-    }
-    
-    public void action(Joueur j)
-    {
-    
-        j.setPosition(10);
-    }    
-   
+public class CaisseDeCommunaute extends Pioche {
+     public CaisseDeCommunaute() {
+        super();
+
+}
+     public void action(){
+     
+     
+     
+     }
     
 }

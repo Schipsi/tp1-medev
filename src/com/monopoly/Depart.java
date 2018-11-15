@@ -14,5 +14,8 @@ public class Depart extends CaseNonAchetable {
         super();
 
 }
+    public void action(Joueur j)
+    {
     
+    }
 }
