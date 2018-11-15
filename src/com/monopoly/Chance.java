@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp1.medev;
+package com.monopoly;
 
 import java.util.LinkedList;
 
 /**
- * Permet de piocher des cartes de chances
+ *Case qui permet de piocher des cartes de chances
  * @author ouissal ait rholofo
  */
 public class Chance extends Pioche {

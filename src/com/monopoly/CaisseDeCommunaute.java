@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp1.medev;
+package com.monopoly;
 
 import java.util.LinkedList;
 
 /**
- *Permet de piocher des cartes de communauté
+ *case qui rermet de piocher des cartes de communauté
  * @author ouissal ait rholofo
  */
 public class CaisseDeCommunaute extends Pioche {
